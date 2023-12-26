@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: partner-catalog-staging-cujn
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: partner-catalog-staging-cujn
+    app.kubernetes.io/part-of: partner-catalog-staging-3
+  name: partner-catalog-staging-cnchk
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: partner-catalog-staging-cujn
+    weight: null
+status: {}
